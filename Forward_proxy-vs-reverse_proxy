@@ -1,0 +1,25 @@
+🔹 Forward Proxy vs Reverse Proxy (Explained Simply)
+
+If you’ve ever wondered how your data moves on the internet, proxies are like middlemen that pass information between you and the server. But there are two main types — Forward Proxy and Reverse Proxy — and their roles are very different.
+
+🧑‍💻 Forward Proxy – “User’s Middleman”
+
+Think of a forward proxy as a personal assistant you send to the market.
+
+You (the client) ask the assistant (proxy) to buy something from a store (server).
+
+The store never knows it’s you asking — it only sees your assistant.
+
+The assistant can filter, hide your identity, or control what you’re allowed to buy.
+
+Real-world use case: corporate networks where employees’ internet requests go through a proxy for security and filtering.
+
+🏢 Reverse Proxy – “Server’s Middleman”
+
+Now imagine a company reception desk. Visitors (clients) come in and talk to the receptionist (reverse proxy), not directly to the employees inside (servers).
+
+The receptionist checks who you are, routes you to the right department, and sometimes even caches brochures so you get them faster.
+
+You (the client) don’t see which employee actually does the work — you only deal with the receptionist.
+
+Real-world use case: large websites (like Amazon, Netflix) use reverse proxies for load balancing, security, and hiding their internal server structure.
