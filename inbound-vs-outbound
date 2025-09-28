@@ -1,0 +1,20 @@
+💡 Inbound vs. Outbound Rules in AWS — Explained Like Road Traffic 🚦
+
+When you launch an AWS resource (like an EC2 server), you attach a security group. Think of this security group as a virtual firewall controlling the “traffic” coming in and going out of your server.
+
+Here’s the simplest way to see it:
+
+🚗 Inbound Rules = Incoming Traffic (Visitors Coming In)
+ Imagine your server is your house. Inbound rules decide who can enter through your door and on which doorbell they can ring.
+🔹 Example: Allow port 80 (HTTP) from anywhere → anyone on the internet can visit your website.
+🔹 Example: Allow port 22 (SSH) from your office IP only → only you can remotely log in.
+
+🚚 Outbound Rules = Outgoing Traffic (You Going Out)
+ This is like who you’re allowed to call or visit outside. Outbound rules decide what traffic your server can send to the internet or other servers.
+🔹 Example: Allow all outbound → your server can download updates or call APIs.
+🔹 Example: Restrict outbound to only a database IP → your server can talk only to that database.
+
+🔑 Quick Takeaway
+Inbound = Who can come in
+Outbound = Where you can go
+Keeping these rules tight improves security and reduces risk.
