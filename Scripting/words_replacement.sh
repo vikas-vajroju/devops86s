@@ -7,3 +7,4 @@ echo "$person2: Not yet, $person1. I’m finalizing the last section right now."
 echo "$person1: Okay, let me know if you need any help with the data."
 echo "$person2: Sure, thanks. Could you review the charts once I send them?"
 echo "$person1: Absolutely, I’ll review them as soon as they arrive."
+
