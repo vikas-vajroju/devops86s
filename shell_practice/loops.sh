@@ -31,4 +31,3 @@ do
         echo "$package is already installed ....SKIPPING..."
     fi
 done
-
