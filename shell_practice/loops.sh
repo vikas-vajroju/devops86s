@@ -25,7 +25,6 @@ echo "Scripting starting $(date)"
 for package in $@
 do
     dnf list installed $package &>>$log_file
-
     if [ $? is -ne 0 ]; then
         dnf install $package -y &>>$log_file
         validate $? $package
