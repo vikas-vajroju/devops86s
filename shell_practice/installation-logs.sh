@@ -6,6 +6,7 @@ USERID=$(id -u)
 logs_folder="/var/log/shell-script"
 script_name=$( echo $0 | cut -d "." -f1 )
 log_file="$log_folder/$script_name.log"
+mkdir -p $logs_folder
 
 if [ $USERID -ne 0 ]; then
     echo "ERROR : please run the script with root user access "
@@ -20,8 +21,6 @@ validate(){
         echo "$2 Installation is success"
     fi
 }
-
-mkdir -p $logs_folder
 
 dnf list installed mysql &>>$log_file
 
