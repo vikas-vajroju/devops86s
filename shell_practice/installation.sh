@@ -18,21 +18,30 @@ validate(){
     fi
 }
 
-mysql=$(dnf list installed mysql)
-if [ $mysql -ne 0 ]; then
-    echo "Installing $(dnf install mysql -y)"
-    exit 1
+dnf list installed mysql
+
+if [ $? -ne 0 ]; then
+    dnf install mysql -y
+    validate $? MYSQL
 else
-    echo "MYSQL skip Installation"
+    echo "MYSQL skip Installation as package is already installed"
 fi
 
-validate $? MYSQL
+dnf list installed nginx
 
-dnf install nginx -y 
+if [ $? -ne 0 ]; then
+    dnf install nginx -y
+    validate $? NGINX
+else
+    echo "NGINX skip Installation as package is already installed"
+fi
 
-validate $? "NGINX"
 
+dnf list installed python3
 
-dnf install mongodb-mongosh -y 
-
-validate $? MongoDB
+if [ $? -ne 0 ]; then
+    dnf install python3 -y
+    validate $? PYTHON3
+else
+    echo "Python3 skip Installation as package is already installed"
+fi
