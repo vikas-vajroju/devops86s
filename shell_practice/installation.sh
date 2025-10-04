@@ -18,7 +18,13 @@ validate(){
     fi
 }
 
-dnf install mysql -y
+mysql=$(dnf list installed mysql)
+if [ $mysql -ne 0 ]; then
+    echo "Installing $(dnf install mysql -y)"
+    exit 1
+else
+    echo "MYSQL skip Installation"
+fi
 
 validate $? MYSQL
 
