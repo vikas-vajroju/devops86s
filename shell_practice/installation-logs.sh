@@ -1,5 +1,5 @@
-#!/bin/bash
-#installtion script
+# #!/bin/bash
+# #installtion script
 
 
 USERID=$(id -u)
