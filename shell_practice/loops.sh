@@ -28,7 +28,7 @@ do
 
     if [ $? is -ne 0 ]; then
         dnf install $package -y &>>$log_file
-        validate $? $package 
+        validate $? $package
     else
         echo "$package is already installed ....SKIPPING..."
     fi
