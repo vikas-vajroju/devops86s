@@ -20,6 +20,8 @@ validate(){
     fi
 }
 
+echo "Scripting starting $date"
+
 for package in $@
 do
     dnf list installed $package &>>$log_file
