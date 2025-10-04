@@ -35,7 +35,7 @@ for package in $@
 
 do
     
-    if [ ! dnf list installed "$package" &>>"$log_file" ]; then
+    if ! dnf list installed "$package" &>>"$log_file"; then
         dnf install "$package" -y &>>"$log_file"
         validate $? "$package"
     else
