@@ -23,9 +23,19 @@ validate(){
 echo "Scripting starting $(date)"
 
 for package in $@
+# do
+#     dnf list installed "$package" &>>"$log_file"
+#     if [ $? is -ne 0 ]; then
+#         dnf install "$package" -y &>>"$log_file"
+#         validate $? "$package"
+#     else
+#         echo "$package is already installed ....SKIPPING..."
+#     fi
+# done
+
 do
-    dnf list installed "$package" &>>"$log_file"
-    if [ $? is -ne 0 ]; then
+    
+    if [ ! dnf list installed "$package" &>>"$log_file" ]; then
         dnf install "$package" -y &>>"$log_file"
         validate $? "$package"
     else
