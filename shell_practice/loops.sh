@@ -20,7 +20,7 @@ validate(){
     fi
 }
 
-echo "Scripting starting $date"
+echo "Scripting starting $(date)"
 
 for package in $@
 do
