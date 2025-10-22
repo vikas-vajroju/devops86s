@@ -40,3 +40,4 @@ terraform.tfplan
 *.swp
 *.swo
 *.log
+**LICENSE*
