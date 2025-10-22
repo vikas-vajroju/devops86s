@@ -1,6 +1,0 @@
-# Ignore Terraform local files
-.terraform/
-*.exe
-*.zip
-*.tar.gz
-terraform.tfstate
