@@ -5,6 +5,8 @@ resource "aws_instance" "terraform" {
 
   tags = {
     Name = "Devops_86s"
+    environment="dev"
+    region="eastus"
   }
 }
 
