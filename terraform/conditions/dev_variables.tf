@@ -9,3 +9,11 @@ variable "ami-id" {
 variable "environment" {
   default = "dev"
 }
+
+variable "tags" {
+  default = {
+    Name = "Devops_86s"
+    environment="dev"
+    region="eastus"
+  }
+}

@@ -3,11 +3,7 @@ resource "aws_instance" "terraform" {
   instance_type = var.environment == "dev" ? "t3.micro" : "t3.small"
   vpc_security_group_ids = [aws_security_group.allow-everything.id]
 
-  tags = {
-    Name = "Devops_86s"
-    environment="dev"
-    region="eastus"
-  }
+  tags = var.tags
 }
 
 resource "aws_security_group" "allow-everything" {
