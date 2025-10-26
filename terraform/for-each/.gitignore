@@ -1,0 +1,43 @@
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Ignore override files (used for local testing)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform variable files that may contain secrets
+*.tfvars
+*.tfvars.json
+
+# Terraform plan files
+terraform.tfplan
+*.tfplan
+
+# Lock file (optional: include this if you want deterministic provider versions)
+# .terraform.lock.hcl
+
+# Backup files
+*.backup
+*.bak
+
+# Sensitive output
+*.out
+
+# IDE/editor junk
+.vscode/
+.idea/
+*.swp
+*.swo
+*.log
+**LICENSE*
