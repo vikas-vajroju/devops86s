@@ -5,10 +5,7 @@ terraform {
       version = "6.17.0"
     }
   }
-}
-
-terraform {
-  backend "s3" {
+    backend "s3" {
     bucket = "devops-86s-remote"
     key    = "devops-86s-${terraform.workspace}"
     region = "us-east-1"
@@ -16,7 +13,6 @@ terraform {
     encrypt = true
   }
 }
-
 
 provider "aws" {
   # Configuration options
